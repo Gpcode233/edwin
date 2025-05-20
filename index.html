@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #1a365d;
-            --secondary-blue: #2c5282;
+            --primary-blue: #1452aa;
+            --secondary-blue: #254d8a;
             --gold-accent: #d4af37;
             --light-bg: #f8f9fa;
         }
@@ -25,7 +25,13 @@
             overflow-x: hidden;
         }
         
-        h1, h2, h3, h4 {
+        h1{
+            color: #0a2e63;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        } 
+
+        h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             color: var(--primary-blue);
@@ -44,7 +50,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(26, 54, 93, 0.55); /* dark overlay, adjust opacity as needed */
+            background: rgba(26, 54, 93, 0.322); /* dark overlay, adjust opacity as needed */
             z-index: 0;
         }
         
@@ -181,15 +187,17 @@
         
         /* Sermon card size override */
         .sermon-card {
-            width: 1920px;
-            max-width: 100%;
-            height: 1080px;
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            box-sizing: border-box;
+            margin: 0 auto;
         }
         .sermon-card .relative {
-            height: 56.25%; /* 1080/1920 = 0.5625 for 16:9 video */
+            aspect-ratio: 16/9;
             min-height: 0;
         }
         .sermon-card iframe {
@@ -206,9 +214,19 @@
                 height: auto;
             }
         }
+
+       /* .hero-section h1 {
+            text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+            /* Optional: add a semi-transparent background for extra contrast on mobile 
+            display: inline-block;
+            padding: 0.25em 0.5em;
+            background: rgba(255,255,255,0.08), 0 1px 0 #fff;
+            border-radius: 0.5em;
+    }*/
+    
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 overflow-x-hidden box-border">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -259,7 +277,7 @@
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 w-full max-w-screen-xl">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gold-accent">Pastor Edwin</span></h2>
                 <div class="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
@@ -370,7 +388,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Sermon 1 -->
-                <div class="sermon-card rounded-lg overflow-hidden shadow-lg slide-up">
+                <div class="sermon-card w-full max-w-[1920px] mx-auto rounded-lg overflow-hidden shadow-lg slide-up">
                     <div class="relative pb-[56.25%] bg-gray-200">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/9Yy6tLGXKUM?si=oeC4ujalxqrNargJ" 
                         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
@@ -492,6 +510,7 @@
                             Stay updated with inspiring messages, event announcements, and more.
                         </p>
                         <form class="flex flex-col sm:flex-row gap-4">
+                            <input type="text" placeholder="First Name" class="w-32 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
                             <input type="email" placeholder="Your Email" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
                             <button type="submit" class="btn-gold px-6 py-2 rounded-lg font-bold whitespace-nowrap">
                                 Subscribe
@@ -531,10 +550,10 @@
                 </div>
                 
                 <div class="flex space-x-6">
-                    <a href="#home" class="hover:text-yellow-400">Home</a>
-                    <a href="#about" class="hover:text-yellow-400">About</a>
-                    <a href="#wisdom" class="hover:text-yellow-400">Wisdom4Winning</a>
-                    <a href="#sermons" class="hover:text-yellow-400">Sermons</a>
+                    <a href="#home" class="hover:text-yellow-400">Home</a> <br>
+                    <a href="#about" class="hover:text-yellow-400">About</a> <br>
+                    <a href="#wisdom" class="hover:text-yellow-400">Wisdom4Winning</a> <br>
+                    <a href="#sermons" class="hover:text-yellow-400">Sermons</a> <br>
                     <a href="#contact" class="hover:text-yellow-400">Contact</a>
                 </div>
             </div>
@@ -545,16 +564,16 @@
                 </p>
                 
                 <div class="flex space-x-4">
-                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                    <a href="https://www.facebook.com/edwin.biayeiboii" class="text-blue-300 hover:text-yellow-400">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                    <a href="https://www.instagram.com/edwinbiayeibo?igsh=cG13eWllMWNuYnNm" class="text-blue-300 hover:text-yellow-400">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                    <a href="https://x.com/EdwinBiayeibo?t=nGzMlfA0ez-oe8EZMjllpA&s=09" class="text-blue-300 hover:text-yellow-400">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                    <a href="https://www.youtube.com/@EdwinBiayeiboW4W/videos" class="text-blue-300 hover:text-yellow-400">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
