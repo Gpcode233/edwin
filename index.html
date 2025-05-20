@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastor Edwin Biayeibo | House on the Rock Enugu</title>
+    <meta name="description" content="Official website of Pastor Edwin Biayeibo, resident pastor of House on the Rock Enugu. Wisdom, inspiration and spiritual guidance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a365d;
+            --secondary-blue: #2c5282;
+            --gold-accent: #d4af37;
+            --light-bg: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
+        .hero-section {
+            background: url('hero.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 90vh;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 54, 93, 0.55); /* dark overlay, adjust opacity as needed */
+            z-index: 0;
+        }
+        
+        .hero-section > .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gold-accent {
+            color: var(--gold-accent);
+        }
+        
+        .gold-border {
+            border-color: var(--gold-accent);
+        }
+        
+        .btn-gold {
+            background-color: var(--gold-accent);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gold:hover {
+            background-color: #b7962e;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-gold {
+            border: 2px solid var(--gold-accent);
+            color: var(--gold-accent);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-gold:hover {
+            background-color: var(--gold-accent);
+            color: white;
+        }
+        
+        .testimonial-card {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .scripture-verse {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .scripture-verse::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 3rem;
+            line-height: 1;
+            color: var(--gold-accent);
+            font-family: serif;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--gold-accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold">EB</div>
+                <span class="text-xl font-bold text-blue-900">Pastor Edwin</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-blue-900 hover:text-blue-700">Home</a>
+                <a href="#about" class="nav-link text-blue-900 hover:text-blue-700">About</a>
+                <a href="#wisdom" class="nav-link text-blue-900 hover:text-blue-700">Wisdom4Winning</a>
+                <a href="#sermons" class="nav-link text-blue-900 hover:text-blue-700">Sermons</a>
+                <a href="#contact" class="nav-link text-blue-900 hover:text-blue-700">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-blue-900">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-white fade-in">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 slide-up">
+                Lighting the <span class="gold-accent">Path</span> of Purpose
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto slide-up delay-1">
+                Welcome to a journey of faith, wisdom, and divine purpose with Pastor Edwin Biayeibo.
+            </p>
+            <div class="slide-up delay-2">
+                <a href="https://youtube.com/@houseontherockenugu/videos" target="_blank" class="btn-gold px-8 py-3 rounded-full font-bold inline-block">
+                    <i class="fas fa-play mr-2"></i> Watch Latest Sermon
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gold-accent">Pastor Edwin</span></h2>
+                <div class="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    A shepherd after God's own heart, leading with wisdom and compassion.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 slide-up">
+                    <div class="relative">
+                        <img src="WhatsApp Image 2025-05-20 at 16.47.33_4d43c0a1.jpg" 
+                             alt="Pastor Edwin Biayeibo" 
+                             class="rounded-lg shadow-xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 bg-blue-900 text-white p-4 rounded-lg shadow-lg">
+                            <p class="font-bold">Resident Pastor</p>
+                            <p>House on the Rock Enugu</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 slide-up delay-1">
+                    <h3 class="text-2xl font-bold mb-4">Biography</h3>
+                    <p class="mb-6 text-gray-700">
+                        Pastor Edwin Biayeibo is a dynamic minister of the Gospel, called to raise leaders and transform lives through the preaching of God's Word. As the resident pastor of House on the Rock Enugu, he oversees a thriving congregation with a vision to impact society through sound biblical teaching and practical Christian living.
+                    </p>
+                    <p class="mb-6 text-gray-700">
+                        With over 15 years of ministry experience, Pastor Edwin is passionate about helping individuals discover their God-given purpose and walk in divine wisdom. His messages are known for their depth, relevance, and transformative power.
+                    </p>
+                    <div class="scripture-verse italic text-blue-900 mb-6">
+                        "And I will give you pastors according to mine heart, which shall feed you with knowledge and understanding." - Jeremiah 3:15
+                    </div>
+                    <a href="#contact" class="btn-outline-gold px-6 py-2 rounded-full font-bold inline-block">
+                        Connect With Pastor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wisdom4Winning Network -->
+    <section id="wisdom" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Wisdom4<span class="gold-accent">Winning</span> Network</h2>
+                <div class="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    Join a community committed to walking in divine wisdom for victorious living.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 slide-up">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Daily Wisdom</h3>
+                    <p class="text-gray-600 mb-4">
+                        Receive bite-sized wisdom nuggets to guide your daily decisions and keep you aligned with God's purpose.
+                    </p>
+                  <!-- Card 2   <a href="#" class="text-blue-900 font-bold hover:underline">Read More →</a> -->
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 slide-up delay-1">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Community Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Connect with like-minded believers who are committed to excellence and kingdom impact.
+                    </p>
+                   <!--  <a href="#" class="text-blue-900 font-bold hover:underline">Join Now →</a> -->
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 slide-up delay-2">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-book-open text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Resources</h3>
+                    <p class="text-gray-600 mb-4">
+                        Access exclusive teachings, study guides, and tools to deepen your spiritual walk.
+                    </p>
+                    <!-- <a href="#" class="text-blue-900 font-bold hover:underline">Explore →</a> -->
+                </div>
+            </div>
+            
+            <div class="text-center slide-up delay-3">
+                <a href="#contact" class="btn-gold px-8 py-3 rounded-full font-bold inline-block">
+                    <i class="fas fa-user-plus mr-2"></i> Join the Network
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermons Section -->
+    <section id="sermons" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Recent <span class="gold-accent">Sermons</span></h2>
+                <div class="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    Life-changing messages to nourish your spirit and transform your life.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Sermon 1 -->
+                <div class="rounded-lg overflow-hidden shadow-lg slide-up">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9Yy6tLGXKUM?si=oeC4ujalxqrNargJ" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">How To Leave Your Mark In The World PT2</h3>
+                        <p class="text-gray-600 mb-4">13th April 2025</p>
+                        <p class="text-gray-700 mb-4">
+                            Discover Seven (7) Things people want to be remembered for.
+                        </p>
+                        <a href="https://youtu.be/9Yy6tLGXKUM?si=k4b8meG2_5EmSJ8K" class="text-blue-900 font-bold hover:underline">Watch Full Message →</a>
+                    </div>
+                </div>
+                
+                <!-- Sermon 2 -->
+                <div class="rounded-lg overflow-hidden shadow-lg slide-up delay-1">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/plDCs77483E?si=z5zC3OzvwZfnL-Ah" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                        picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">When The Soul Encounters GOD PT1</h3>
+                        <p class="text-gray-600 mb-4">6th April 2025</p>
+                        <p class="text-gray-700 mb-4">
+                            APRIL SERMON SERIES.
+                        </p>
+                        <a href="https://youtu.be/plDCs77483E?si=scj1gMmGLsOwtiEw" class="text-blue-900 font-bold hover:underline">Watch Full Message →</a>
+                    </div>
+                </div>
+                
+                <!-- Sermon 3 -->
+                <div class="rounded-lg overflow-hidden shadow-lg slide-up delay-2">
+                    <div class="relative pb-[56.25%] bg-gray-200">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/I2Q2JsNoPxc?si=el1RfeQzEzYcFoYO" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+                        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">TRUSTING GOD IN TROUBLED TIMES</h3>
+                        <p class="text-gray-600 mb-4">15TH SEPTEMBER 2024</p>
+                        <p class="text-gray-700 mb-4">
+                            Biblical principles for navigating and overcoming life's challenges.
+                        </p>
+                        <a href="https://youtu.be/I2Q2JsNoPxc?si=YYHhG_qlIWS1jY9E" class="text-blue-900 font-bold hover:underline">Watch Full Message →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center slide-up delay-3">
+                <a href="https://www.youtube.com/@houseontherockenugu/videos" class="btn-outline-gold px-8 py-3 rounded-full font-bold inline-block">
+                    <i class="fas fa-video mr-2"></i> View All Sermons
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="gold-accent">Touch</span></h2>
+                <div class="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    Connect with Pastor Edwin.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2 slide-up">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="btn-gold px-6 py-3 rounded-lg font-bold w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 slide-up delay-1">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Connect With Us</h3>
+                        <div class="flex space-x-4 mb-6">
+                            <a href="https://www.facebook.com/edwin.biayeiboii" class="social-icon bg-blue-900 text-white hover:bg-blue-800">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/edwinbiayeibo?igsh=cG13eWllMWNuYnNm" class="social-icon bg-pink-600 text-white hover:bg-pink-700">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/EdwinBiayeibo?t=nGzMlfA0ez-oe8EZMjllpA&s=09" class="social-icon bg-blue-400 text-white hover:bg-blue-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@EdwinBiayeiboW4W/videos" class="social-icon bg-red-600 text-white hover:bg-red-700">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Join Our Newsletter</h3>
+                        <p class="text-gray-600 mb-4">
+                            Stay updated with inspiring messages, event announcements, and more.
+                        </p>
+                        <form class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" placeholder="Your Email" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <button type="submit" class="btn-gold px-6 py-2 rounded-lg font-bold whitespace-nowrap">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Church Address</h3>
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-blue-900 mt-1 mr-3"></i>
+                            <p class="text-gray-700">House on the Rock Enugu<br>123 Faith Avenue, Enugu State</p>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-phone-alt text-blue-900 mt-1 mr-3"></i>
+                            <p class="text-gray-700">+234 812 345 6789</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-900 mt-1 mr-3"></i>
+                            <p class="text-gray-700">info@hotrenugu.org</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold">EB</div>
+                        <span class="text-xl font-bold">Pastor Edwin Biayeibo</span>
+                    </a>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#home" class="hover:text-yellow-400">Home</a>
+                    <a href="#about" class="hover:text-yellow-400">About</a>
+                    <a href="#wisdom" class="hover:text-yellow-400">Wisdom4Winning</a>
+                    <a href="#sermons" class="hover:text-yellow-400">Sermons</a>
+                    <a href="#contact" class="hover:text-yellow-400">Contact</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="mb-4 md:mb-0 text-blue-300">
+                    &copy; 2023 Pastor Edwin Biayeibo. All rights reserved.
+                </p>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-blue-300 hover:text-yellow-400">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-yellow-400 text-blue-900 w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile Menu Toggle (would need additional JS for functionality)
+        // Currently just a placeholder
+        
+        // Simple form submission handler
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                form.reset();
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.slide-up, .fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
